@@ -1,0 +1,8 @@
+<div>
+  <% form_tag({:action=> "attach"}, :method => 'post') do %>
+    <p>
+      <label for="name">Player name:</label>
+      <%= text_field_tag 'name' %>
+    </p>
+  <% end %>
+</div>
