@@ -1,8 +1,9 @@
 require 'test_helper'
 
 class PlayerTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  def test_truth
-    assert true
+  
+  def test_name_should_be_uniq
+    Player.create(:name => 'zhangshanfeng')
+    assert !Player.new(:name => 'zhangshanfeng').valid?
   end
 end
