@@ -5,6 +5,7 @@ class CreatePlayers < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :players, :name, :uniq => true
   end
 
   def self.down
