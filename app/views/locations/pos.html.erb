@@ -1,0 +1,18 @@
+<div style="width: 78%; height: 550px; border: 2px solid; float: left">
+  <% for player in @players %>
+    <div style='width: 10em; height: 5em; border: 1px solid; margin: 1em'> 
+      <%= player.name %>
+    </div>
+  <% end %>
+</div>
+
+<div style="float: left; margin-left: 1em"> 
+  <h3>Location: <%= @location %></h3>
+  
+  <ul>
+    <% for location in @location.neighours %>
+      <%= link_to location.alias, location_url(:x => location.x, :y => location.y) %>
+    <% end %>
+  </ul>
+</div>
+

@@ -3,8 +3,9 @@ class PlayersController < ApplicationController
   end
   
   def attach
-    session['player'] = Player.find_or_create_by_name(params[:name]).id
+    player = Player.find_or_create_by_name(params[:name])
+    session['player'] = player.id
     flash[:notice] =  "login successful!"
-    render :template => "players/login"
+    redirect_to location_url(:x => player.location.x, :y => player.location.y)
   end
 end
