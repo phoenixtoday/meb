@@ -11,6 +11,6 @@ class PlayersController < ApplicationController
     player = Player.find_or_create_by_name(params[:name])
     session['player'] = player.id
     flash[:notice] =  "login successful!"
-    redirect_to location_url(:x => player.location.x, :y => player.location.y)
+    redirect_to url_for_location(player.location)
   end
 end

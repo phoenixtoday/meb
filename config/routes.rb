@@ -8,7 +8,7 @@ ActionController::Routing::Routes.draw do |map|
   # Sample of named route:
   #   map.purchase 'products/:id/purchase', :controller => 'catalog', :action => 'purchase'
   # This route can be invoked with purchase_url(:id => product.id)
-  map.location 'locations/pos/:x/:y', :controller => 'locations', :action => 'pos'
+  map.location 'locations/:x/:y', :controller => 'locations', :action => 'pos'
   map.login 'login', :controller => 'players', :action => 'login'
   map.logout 'logout', :controller => 'players', :action => 'logout'
 

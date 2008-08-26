@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
   def pos
     @location = Location.at(params[:x], params[:y])
     @players = @location.players
-    @player.update_attribute(:location_id, @location.id)
+    @player.move_to(@location)
   end
   
   protected

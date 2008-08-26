@@ -14,18 +14,10 @@
   <h3> Location: <%= @location %> </h3>
   
   <ul>
-    <li>
-      <%= link_to "North", location_url(:x => @location.north.x, :y => @location.north.y) %>
-    </li>
-    <li>
-      <%= link_to "West", location_url(:x => @location.west.x, :y => @location.west.y) %>
-    </li>
-    <li>
-      <%= link_to "East", location_url(:x => @location.east.x, :y => @location.east.y) %>
-    </li>
-    <li>
-      <%= link_to "South", location_url(:x => @location.south.x, :y => @location.south.y) %>
-    </li>
+    <li> <%= link_to "North", url_for_location(@location.north) %> </li>
+    <li> <%= link_to "West", url_for_location(@location.west) %> </li>
+    <li> <%= link_to "East", url_for_location(@location.east) %> </li>
+    <li> <%= link_to "South", url_for_location(@location.south) %> </li>
   </ul>
 </div>
 

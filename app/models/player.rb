@@ -7,4 +7,9 @@ class Player < ActiveRecord::Base
   def generate_location
     self.location = Location.at(0, 0)
   end
+  
+  def move_to(location)
+    self.location = location
+    self.save
+  end
 end

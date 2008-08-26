@@ -12,4 +12,10 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+  
+  
+  def url_for_location(location)
+    location_url :x => location.x, :y => location.y
+  end
+  helper_method :url_for_location  
 end
